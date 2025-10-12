@@ -1,0 +1,74 @@
+CSS
+1.      p.hero-descriptor_descr.lead
+2.      [target='_blank'] .icon-telegram
+3.      footer div[class*='row']
+4.      a[routerlink='/'][routerlinkactive='-active']
+5.      button[aria-label='Показать подсказки']
+6.      button.header-link.-guest
+7.      a .socials_icon.icon.icon-telegram
+8.      nav a[routerlinkactive='-active']
+9.      div button[appscrollto="aboutSection"]
+10.     .header a.header_logo
+11.     .global-layout header.header
+12.     div header[class="header bg-basic-dark"]
+13.     img.about-picture_img[src="/assets/images/homepage/info_1.jpg"]
+14.     div.col a.footer_logo
+15.     button.ytp-unmute div.ytp-unmute-text
+16.     div.hero-descriptor h1.display-2
+17.     .col-12 div[class="hero-video"]
+18.     span.icon-facebook
+19.     a.contacts_link[rel="nofollow"]
+20.     #aboutSection img[src="/assets/images/homepage/info_2.jpg"]
+21.     .contacts_link[href="https://ithillel.ua"]
+22.     .contacts h2
+23.     p[class*='hero']
+24.     meta[name='viewport'][content*='viewport-fit=cover']
+25.     a[tabindex='0'][href*='youtube.com'][role="link"]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+XPATH
+1.  //title[text()='Hillel Qauto']
+2. //div[contains(@class, 'global-layout')]
+3. //body//div//p[@class='hero-descriptor_descr lead']
+4. //a/span[@class='socials_icon icon icon-telegram']
+5. //a[@target='_blank']//span[contains(@class, 'icon-telegram')]
+6. //div[@id='aboutSection']
+7. html/body//div[@class='section contacts']
+8. //head//link[@sizes='16x16']
+9. //body//div[@id='contactsSection']//a[text()='support@ithillel.ua']
+10. //footer//div[contains(@class, 'row')]
+11. //footer//div[contains(@class, 'row')]//p[text()='© 2021 Hillel IT school']
+12. //head//link[@rel='stylesheet']
+13. //body//div//a[@routerlink='/' and @routerlinkactive="-active"]
+14. //h1[text()='Do more!']
+15. //div//p[contains(@class, 'hero')]
+16. //div//button[@aria-label='Показать подсказки']
+17. //meta[@name='viewport'and contains(@content, 'viewport-fit=cover')]
+18. //body//div/nav/a[text()='Home']
+19. /html/head/title[text()='Як потрапити у майбутнє? Трансформація навчання. - YouTube']
+20.//body//div//button[@class='header-link -guest']
+21. //body//div[@class="app-content"]
+22. //body//div[@id='aboutSection' and @class="section about"]//p[text()='Log fuel expenses']
+23. //body//div//h2[text()='Contacts']
+24. //body//div//a[@tabindex="0" and @href="https://www.youtube.com/channel/UCIyfaiKil5oomY64XIRJEAA?embeds_referring_euri=https%3A%2F%2Fqauto2.forstudy.space%2F"]
+25. html/head/meta[@charset="utf-8"]
+
+
+
+
+
+
+
