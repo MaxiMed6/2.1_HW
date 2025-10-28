@@ -1,0 +1,41 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: myapp-container
+    networks:
+      - mynetwork
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: >
+      sh -c "pytest test_app.py --alluredir=/app/allure-results && 
+             echo 'Тесты завершены! Отчёт в папке allure-results'"
+    volumes:
+      - ./allure-results:/app/allure-results
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    networks:
+      - mynetwork
+    volumes:
+      - postgres_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "user", "-d", "mydb"]
+      interval: 2s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  postgres_data:
